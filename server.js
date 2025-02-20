@@ -53,7 +53,7 @@ app.post('/process-payment', async (req, res) => {
             currency: 'usd',
             payment_method: paymentMethodId,
             confirm: true,
-            return_url: 'https://your-frontend-url.github.io' // Replace with your GitHub Pages URL
+            return_url: 'https://your-username.github.io/assignmate-frontend' // Replace with your GitHub Pages URL
         });
 
         delete storedOTP[mobile]; // Clear OTP after use
@@ -65,4 +65,4 @@ app.post('/process-payment', async (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
